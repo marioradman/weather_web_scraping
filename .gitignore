@@ -1,0 +1,12 @@
+dist/
+out/
+.idea/
+credentials/
+*/**/__pycache__/
+src/pipLog.txt
+
+.env
+data/*
+!data/.gitkeep
+src/appendErrorLog.txt
+credentials/*
