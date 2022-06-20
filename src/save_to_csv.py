@@ -68,11 +68,11 @@ def save_to_file(data, column_names, prefix='', directory='../data/'):
 
     if os.path.exists(directory + file_name) and os.path.isfile(directory + file_name):
         entries_before = sum(1 for line in open(directory + file_name))
-        df.to_csv(directory + file_name, mode='a', index=False, encoding="utf-8-sig", header=False)
+        df.to_csv(directory + file_name, mode='a', index=False, encoding="utf-8-sig", header=False, sep=';')
         entries_now = sum(1 for line in open(directory + file_name))
         new_entries = entries_now - entries_before
     else:
-        df.to_csv(directory + file_name, mode='a', index=False, encoding="utf-8-sig", header=True)
+        df.to_csv(directory + file_name, mode='a', index=False, encoding="utf-8-sig", header=True, sep=';')
         new_entries = sum(1 for line in open(directory + file_name)) - 1
 
     return new_entries
