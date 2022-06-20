@@ -1,7 +1,7 @@
 # Web Scraping Weather
 ## About
 ### Project
-* Created Date: 06.02.2022
+* Created Date: 20.06.2022
 * University:   FH Joanneum
 * Study:        Mobile Software Development - 2020
 * Course:       Scripting - WS21/22
