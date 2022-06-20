@@ -77,6 +77,8 @@ def upload_files(file_name, bucket, object_name=None, args=None):
 # get all created files, pushed it to S3-Bucket and deletes them
 files_in_dir = os.listdir('data')
 for file_in_dir in files_in_dir:
+    if str(file_in_dir) == '.gitkeep':
+        continue
     upload_files(f"{BASE_DIR}/data/{file_in_dir}", S3_BUCKET_NAME)
     os.remove(f"{BASE_DIR}/data/{file_in_dir}")
 
