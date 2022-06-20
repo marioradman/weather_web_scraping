@@ -56,9 +56,9 @@ COLUMNS_WEATHER_STATION = ['dew_point_F',
 def save_to_file(data, column_names, prefix='', directory='../data/'):
     now = datetime.now()
     if prefix == '':
-        file_name = now.strftime("%Y-%m") + ".csv"
+        file_name = now.strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
     else:
-        file_name = prefix + "_" + now.strftime("%Y-%m") + ".csv"
+        file_name = prefix + "_" + now.strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
 
     df = pd.DataFrame(data)
     df = df.replace('None', '')
